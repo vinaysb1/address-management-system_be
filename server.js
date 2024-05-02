@@ -207,7 +207,6 @@ app.post('/addresses', async (req, res) => {
  *         description: Internal server error
  */
 
-
 /**
  * @swagger
  * /addresses/{id}:
@@ -266,7 +265,7 @@ app.delete('/addresses/:id', async (req, res) => {
  *         description: Internal server error
  */
 // Retrieve an address by ID
-app.get('/addresses/:id', async (req, res) => {
+app.get ('/addresses/:id', async (req, res) => {
     try {
       const { id } = req.params;
       const client = await pool.connect();
@@ -282,6 +281,6 @@ app.get('/addresses/:id', async (req, res) => {
     }
   });
   
-app.listen(port, () => {
+app.listen(port, () =>  {
   console.log(`Server running on port ${port}`);
 });
