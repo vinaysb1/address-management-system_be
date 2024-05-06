@@ -42,7 +42,7 @@ app.use(bodyParser.json());
         zipcode VARCHAR(255)
       );
     `);
-    await client.query(`
+    await client.query (`
       CREATE TABLE IF NOT EXISTS user_address_relation (
         id UUID PRIMARY KEY,
         user_id UUID,
@@ -73,7 +73,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./server.js'],
+  apis:['./server.js'],
 };
 
 // Initialize swagger-jsdoc
@@ -149,7 +149,7 @@ app.post('/addresses', async (req, res) => {
       res.status(201).json({ id: addressId });
     } catch (err) {
       console.error(err);
-      res.status(500).json({ error: 'Error adding address' });
+      res.status(500).json({ error:'Error adding address' });
     }
   });
 
