@@ -156,6 +156,7 @@ import {
 const router = express.Router();
 
 router.route('/').post(createAddress);
+
 router.route('/:id').get(getAddressById).put(updateAddress).delete(deleteAddress);
 
 export default router;
